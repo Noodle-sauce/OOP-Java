@@ -1,22 +1,26 @@
 import java.util.Scanner;
 
-class Exercise2{
+class Sum{
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
         
         int sum = 0;
         int read;
         
-        System.out.println("Please enter first number: ");
+        System.out.print("Please enter first number: ");
         read=reader.nextInt();
         sum+=read;
         
-        System.out.println("Please enter second number: ");
+        System.out.print("Please enter second number: ");
         read=reader.nextInt();
         sum+=read;
         
-        System.out.println("Please enter second number: ");
+        System.out.print("Please enter third number: ");
         read=reader.nextInt();
         sum+=read;
+        
+        System.out.print("Sum: "+sum);
     }
 }
+
+//I eddited it to make things nicer
