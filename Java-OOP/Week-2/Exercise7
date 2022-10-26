@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Exercise7{
+    
+    private static void printStars(int amount){
+        int index=0;
+        while(index <= amount){
+            System.err.print("*");
+            index++;
+        }
+        System.out.println("");
+        
+    }
+    
+    
+    public static void main(String[] args){
+        Scanner reader = new Scanner(System.in);
+        printStars(3);
+        printStars(4);
+        printStars(5);
+    }
+}
