@@ -7,7 +7,7 @@ class Exercise3 {
         
         int sum = 0;
         while (true){
-            int read = Scanner.nextInt();
+            int read = Integer.parseInt(reader.nextLine());
             if(read == 0){
                 break;
             }else{
@@ -20,3 +20,4 @@ class Exercise3 {
 }
 
 //I have a error apearing at line 10 I am not sure what the problem is...
+//10:59 Figured out what the problem was
