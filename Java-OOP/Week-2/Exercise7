@@ -5,7 +5,7 @@ class Exercise7{
     private static void printStars(int amount){
         int index=0;
         while(index <= amount){
-            System.err.print("*");
+            System.out.print("*");
             index++;
         }
         System.out.println("");
