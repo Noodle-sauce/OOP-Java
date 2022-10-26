@@ -1,5 +1,21 @@
-class helloworld{
-    public static void(String[] args){
-        System.out.println("Hello world");
+import java.util.Scanner;
+
+class Pasword{
+    public static void main(String[] args){
+        Scanner reader = new Scanner(System.in);
+        
+        while(true){
+            System.err.println("Please enter password");
+            
+            String pasword = reader.nextLine(); 
+            
+            if(pasword.equals("secret")){
+                System.err.println("Corect");
+                break;
+            }
+            else{
+                System.err.println("Wrong");
+            }
+        }
     }
 }
