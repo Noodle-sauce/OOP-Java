@@ -5,16 +5,18 @@ class Exercise3 {
         
         Scanner reader = new Scanner(System.in);
         
-        int sum=0;
-        while(true){
-            int read = reader.nextInt();
-            if (read==0){
+        int sum = 0;
+        while (true){
+            int read = Scanner.nextInt();
+            if(read == 0){
                 break;
+            }else{
+                sum = sum + read;
+                System.out.println("Sum now: " + sum);
             }
-            sum+=read;
-            System.out.println("Sum =" + sum);
         }
-        
-        
+        System.out.println("Sum in the end is " + sum);   
     }
 }
+
+//I have a error apearing at line 10 I am not sure what the problem is...
