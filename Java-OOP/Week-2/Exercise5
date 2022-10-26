@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Exercise5 {
+    public static void main(String[] args) {
+        
+        Scanner reader = new Scanner(System.in);
+        int result = 0;
+        System.out.println("Please enter number: ");
+        int power = reader.nextInt();
+        
+        int index = 0;
+        while (index<=power){
+            
+            result += (int) Math.pow(2, index);
+            index++;
+        }
+        System.out.println("The result is: "+result);
+        //int result = (int) Math.pow(2,3);
+    }
+    
+}
