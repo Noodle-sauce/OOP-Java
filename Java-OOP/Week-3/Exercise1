@@ -1,5 +1,51 @@
-class helloworld{
-    public static void(String[] args){
-        System.out.println("Hello world");
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Please enter your name: ");
+        String name = reader.nextLine();
+        System.out.println("Your name: "+name);
+        for(int i=0;i<name.length();i++){
+            System.out.println((i+1) + "charecter" + name.charAt(i))
+        }
     }
 }
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Please enter your name: ");
+        String name = reader.nextLine();
+        System.out.println("Your name: "+name);
+        for(int i=name.length() - 1;i>=0;i--){
+            System.out.println((i+1) + " charecter " + name.charAt(i));
+        }
+    }
+}
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Please enter your name: ");
+        String first = reader.nextLine();
+        
+        System.out.print("Please enter your name: ");
+        String second = reader.nextLine();
+        
+        if(first.indexOf(second)==-1){
+            System.out.print("PThe word is not found");
+        }
+        else{
+            System.out.print("The word is found");
+        }
+    }
+}
+
