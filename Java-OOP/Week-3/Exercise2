@@ -1,0 +1,16 @@
+class exercise1 {
+    public static void main(String[] args) {
+        double answer=aver(3,4,6,1);
+        System.out.print("Answer is: "+answer);
+    }
+    public static double aver(int num1,int num2,int num3,int num4){
+        double avg;
+        avg = sum(num1,num2,num3,num4)/4;
+        return avg;
+    }
+    public static double sum(int num1,int num2,int num3,int num4){
+        double sum;
+        sum = num1 + num2 + num3 + num4;
+        return sum;
+    }
+}
