@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+class exercise3 {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.print("Enter your name:");
+        String name = reader.nextLine();
+        
+        System.out.print("Number of charecters is: "+name.length());
+    }
+}
