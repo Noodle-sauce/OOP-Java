@@ -1,0 +1,28 @@
+//Method payEconomical should decrease the balance by 2.50 euros and method payGourmet by 4.00 euros.
+
+public class LyyraCard{
+    private double balance;
+    
+    public LyyraCard(double balance){
+        this.balance = balance;
+    }
+    public String toString(){
+        return "The card has " + this.balance + " Euros";
+    }
+    public void payEconomical() {
+        this.balance -= 2.5;
+    }
+    public void payGourmet() {
+        this.balance -= 4.0;
+    }
+
+    public static void main(String[] args){
+        LyyraCard card1 = new LyyraCard(50);
+        System.out.println(card1);
+        card1.payEconomical();
+        System.out.println(card1);
+        card1.payGourmet();
+        card1.payEconomical();
+        System.out.println(card1);
+    }
+}
