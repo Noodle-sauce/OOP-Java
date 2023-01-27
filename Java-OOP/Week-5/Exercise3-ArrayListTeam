@@ -1,0 +1,60 @@
+//Add to the class Team the following methods:
+//addPlayer, adds a player to the team
+//printPlayers, prints the players in the team
+//You should store the players in an instance variable of the type ArrayList<Player> within the class Team.
+
+
+import java.util.ArrayList;
+
+public class Player {
+    private String name;
+    private int goals;
+    public Player(String name, int goals) {
+        this.name = name;
+        this.goals = goals;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
+    public int getGoals() {
+        return this.goals;
+    }
+    
+    public String toString() {
+        return "Player: " + this.name + " Goals: " + this.goals;
+    }
+    
+    public static class Team {
+        private String teamName;
+        private ArrayList<Player> team;
+        
+        public Team(String teamName) {
+            this.teamName = teamName;
+            team = new ArrayList<Player>();
+        }
+        
+        public String getTeamName() {
+            return this.teamName;
+        }
+        
+        public void addPlayer(Player player){
+            team.add(player);
+        }
+        
+        public void printPlayers(){
+            for(Player player: team){
+                System.out.println(player);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Team barcelona = new Team("FC Barcelona");
+        Player pekka = new Player("Pekka", 39);
+        barcelona.addPlayer(pekka);
+        barcelona.addPlayer(new Player("Mikael", 1)); 
+        barcelona.printPlayers();
+    }
+}
