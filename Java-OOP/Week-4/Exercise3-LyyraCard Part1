@@ -1,0 +1,14 @@
+public class LyyraCard{
+    private double balance;
+    
+    public LyyraCard(double balance){
+        this.balance = balance;
+    }
+    public String toString(){
+        return "The card has " + this.balance + " Euros";
+    }
+    public static void main(String[] args){
+        LyyraCard card1 = new LyyraCard(50);
+        System.out.print(card1.toString());
+    }
+}
