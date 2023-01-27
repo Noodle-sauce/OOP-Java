@@ -1,0 +1,46 @@
+//Multiple cards (HW)
+
+
+public class LyyraCard{
+    private double balance;
+    
+    public LyyraCard(double balance){
+        this.balance = balance;
+    }
+    public String toString(){
+        return "The card has " + this.balance + " Euros";
+    }
+    public void payEconomical() {
+        if(this.balance>2.5){
+            this.balance -= 2.5;
+        }
+    }
+    public void payGourmet() {
+        if(this.balance>4.0){
+            this.balance -= 4.0;
+        }
+    }
+    public void loadMoney(double amount) {
+        if(this.balance<=150){
+            if(amount>0){
+                this.balance+=amount;
+            }
+        }
+    }
+
+    public static void main(String[] args){
+        LyyraCard card1 = new LyyraCard(5);
+        LyyraCard cardPekka = new LyyraCard(10);
+        LyyraCard cardBrian = new LyyraCard(20);
+        LyyraCard cardAjdin = new LyyraCard(150);
+        LyyraCard cardJeff = new LyyraCard(3);
+        LyyraCard cardJoel = new LyyraCard(8);
+        System.out.println("card1: "+card1.toString());
+        System.out.println("Pekka: "+cardPekka.toString());
+        System.out.println("Brian: "+cardBrian.toString());
+        System.out.println("Ajdin: "+cardAjdin.toString());
+        System.out.println("Jeff: "+cardJeff.toString());
+        System.out.println("Joel: "+cardJoel.toString());
+        
+    }
+}
