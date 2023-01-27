@@ -1,0 +1,19 @@
+//Implement a class Team. At this stage team has only a name (String) and the following functionality: 
+a constructor that sets the team name, getName, which returns the name
+
+public class Team{
+    private String teamName;
+    
+    public Team(String teamName){
+        this.teamName=teamName;
+    }
+    //GetTeamName
+    public String getName(){
+        return this.teamName;
+    }
+
+    public static void main(String[] args) {
+        Team barcelona = new Team("FC Barcelona");
+        System.out.println("Team: " + barcelona.getName());
+    }
+}
