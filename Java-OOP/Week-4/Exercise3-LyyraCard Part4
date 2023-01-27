@@ -1,0 +1,41 @@
+//The method should increase the balance of the card by the given amount. 
+//However, the maximum balance on a card is 150 euros.
+//In case the balance after loading money would be more than that, it should be truncated to 150 euros.
+
+public class LyyraCard{
+    private double balance;
+    
+    public LyyraCard(double balance){
+        this.balance = balance;
+    }
+    public String toString(){
+        return "The card has " + this.balance + " Euros";
+    }
+    public void payEconomical() {
+        if(this.balance>2.5){
+            this.balance -= 2.5;
+        }
+    }
+    public void payGourmet() {
+        if(this.balance>4.0){
+            this.balance -= 4.0;
+        }
+    }
+    public void loadMoney(double amount) {
+        if(this.balance<=150){
+            this.balance+=amount;
+        }
+    }
+
+    public static void main(String[] args){
+        LyyraCard card1 = new LyyraCard(5);
+        System.out.println(card1);
+        card1.payEconomical();
+        System.out.println(card1);
+        card1.payGourmet();
+        card1.payEconomical();
+        System.out.println(card1);
+        card1.loadMoney(10);
+        System.out.println(card1);
+    }
+}
