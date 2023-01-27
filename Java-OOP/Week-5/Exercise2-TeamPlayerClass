@@ -1,0 +1,46 @@
+//Create a class Player with the instance variables for the player name and the number of goals. A player should have two constructors: one that initializes the name and another that initializes the name and the number of goals. Implement also the following methods:
+//getName, returns the player's name
+//getGoals, returns the number of goals
+//toString, returns a string representation that is formed as in the example below
+
+public class Player {
+    private String name;
+    private int goals;
+    public Player(String name, int goals) {
+        this.name = name;
+        this.goals = goals;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
+    public int getGoals() {
+        return this.goals;
+    }
+    
+    public String toString() {
+        return "Player: " + this.name + " Goals: " + this.goals;
+    }
+
+public static class Team {
+    private String teamName;
+
+    public Team(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getTeamName() {
+        return this.teamName;
+    }
+}
+
+public static void main(String[] args) {
+    Team barcelona = new Team("FC Barcelona");
+    System.out.println("Team: " + barcelona.getTeamName());
+    Player brian = new Player("Brian", 0);
+    System.out.println("Player: " + brian.getName());
+    Player pekka = new Player("Pekka", 39);
+    System.out.println("Player: " + pekka.getName() + " Goals: " + pekka.getGoals());
+}
+}
