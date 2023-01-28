@@ -1,0 +1,30 @@
+//Create a method swap, to which will be passed an array and two of its indexes. 
+//The method swaps the values in the indexes around.
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        Scanner reader = new Scanner(System.in);
+        list.add(0);
+        list.add(5);
+        list.add(8);
+        list.add(7);
+        list.add(4);
+        list.add(5);
+        list.add(7);
+        System.out.println("Enter the first index: ");
+        int firstIndex = Integer.parseInt(reader.nextLine());
+        System.out.println("Enter the second index: ");
+        int secondIndex = Integer.parseInt(reader.nextLine());
+        switchIndexes(list,firstIndex,secondIndex);
+        System.out.println("The second list: "+list);
+    }
+    public static void switchIndexes(ArrayList<Integer> list, int firstIndex, int secondIndex){
+        int holder = list.get(firstIndex);
+        list.set(firstIndex, list.get(secondIndex));
+        list.set(secondIndex, holder);
+    }
+}
