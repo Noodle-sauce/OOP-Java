@@ -1,0 +1,32 @@
+//The template you get from the test automaton has a start for an implementation of binary search. 
+//The class BinarySearch holds a method public static boolean search(int[] array, int searchedValue), 
+//the job of which is to figure out, by using binary search, 
+//if the value given as a parameter is in the sorted array that is also given as parameter. 
+//The method search does not work yet, however. Finish the method's implementation into a real binary search.
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        int list[] = {1,2,3,4,5,6,7,8,9};
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int number = Integer.parseInt(reader.nextLine());
+        check(number,list);
+    }
+    
+    public static void check(int number, int[] list){
+        boolean found = false;
+        for(int i = 0;i<list.length;i++){
+            if(number == list[i]){
+                System.out.println("Yeah its there: "+number);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Na its not here: "+number);
+        }
+    }
+}
