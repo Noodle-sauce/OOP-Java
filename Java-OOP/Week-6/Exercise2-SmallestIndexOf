@@ -1,0 +1,29 @@
+//Implement a method indexOfTheSmallest, which returns the index of the smallest value in the array
+
+import java.util.ArrayList;
+
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(1);
+        list.add(0);
+        list.add(4);
+        list.add(1);
+        list.add(2);
+        
+        int smallest= indexOfSmallest(list);
+        System.out.println("The smallest index value is: " + smallest);
+    } 
+    
+    public static int indexOfSmallest(ArrayList<Integer> list){
+        int smal=list.get(0);
+        int index = 0;
+        for(int i=0;i<list.size();i++){
+            if(list.get(i)<=smal){
+                smal= list.get(i);
+                index = i;
+            }
+        }
+        return index;
+    }
+}
