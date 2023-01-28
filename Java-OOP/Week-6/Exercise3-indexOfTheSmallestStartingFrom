@@ -1,0 +1,39 @@
+//Implement a method indexOfTheSmallestStartingFrom, 
+//which works just like the method of the previous assignment, 
+//but only takes into consideration the end of an array starting from a certain index. 
+//In addition to the array the method gets as parameter an index, 
+//from which the search for the smallest will be started.
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        Scanner reader = new Scanner(System.in);
+        list.add(0);
+        list.add(5);
+        list.add(8);
+        list.add(7);
+        list.add(4);
+        list.add(5);
+        list.add(7);
+        
+        System.out.println("Enter the index: ");
+        int start = Integer.parseInt(reader.nextLine());
+        int index = indexOfTheSmallestStartingFrom(list,start);
+        System.out.println("Starting from Index: "+start+" The index of the smallest value is: "+index);
+    }
+    
+    public static int indexOfTheSmallestStartingFrom(ArrayList<Integer> list, int start){
+        int small = list.get(start);
+        int index = start;
+        for(int i = start+1;i<list.size();i++){
+            if(small>list.get(i)){
+                small = list.get(i);
+                index = i;
+            }
+        }
+        return index;
+    }
+}
