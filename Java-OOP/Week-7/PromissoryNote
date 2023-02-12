@@ -1,0 +1,21 @@
+import java.util.HashMap;
+
+public class PromissoryNote {
+    private HashMap<String, Double> loans;
+    
+    public PromissoryNote() { 
+        this.loans = new HashMap<>();
+    }
+    
+    public void setLoan(String toWhom,double value){
+        this.loans.put(toWhom, value);
+    }
+    
+    public double howMuch(String toWhom){
+        if(this.loans.containsKey(toWhom)){
+            return loans.get(toWhom);
+        } else {
+            return 0.0;
+        }
+    }
+}
