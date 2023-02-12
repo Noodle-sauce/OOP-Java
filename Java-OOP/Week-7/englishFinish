@@ -1,0 +1,41 @@
+import java.util.HashMap;
+
+class Dictionary{
+    private HashMap<String, String> translation;
+    
+    public Dictionary() {
+        this.translation = new HashMap<>();
+    }
+    
+    public void add(String english, String finish){
+        this.translation.put(english, finish);
+    }
+    
+    public String translate(String word){
+        if(this.translation.containsKey(word)){
+            return this.translation.get(word);
+        } else {
+            return null;
+        }
+    }
+    
+    public int amountOfWords() {
+        return this.translation.size();
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        Dictionary englishFinish = new Dictionary();
+        englishFinish.add("Hello","Hei");
+        englishFinish.add("Please","Ole kiltti");
+        englishFinish.add("Let","Antaa");
+        englishFinish.add("Food","Ruokaa");
+        
+        System.out.println(englishFinish.translate("Hello"));
+        System.out.println(englishFinish.translate("Please"));
+        System.out.println(englishFinish.translate("Let"));
+        System.out.println(englishFinish.translate("Food"));
+        System.out.println(englishFinish.amountOfWords());
+    }
+}
