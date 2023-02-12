@@ -1,0 +1,29 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+class PhoneManager{
+    private HashMap<String, String> phoneNumber;
+    private HashMap<String, String> addressess;
+    
+    public PhoneManager(){
+        this.phoneNumber = new HashMap<String,String>();
+        this.addressess = new HashMap<String,String>();
+    }
+    
+    public void addPhoneNumber(String name, String number){
+        phoneNumber.put(name,number);
+    }
+    
+    public String searchPhoneNumber(String name){
+        return phoneNumber.get(name);
+    }
+    
+    public void addAddress(String name, String addreess){
+        addressess.put(name, address);
+    }
+    
+    public void removePerson(String name) {
+        phoneNumber.remove(name);
+        addressess.remove(name);
+    }
+}
