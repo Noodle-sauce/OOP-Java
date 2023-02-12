@@ -1,0 +1,13 @@
+import java.util.HashMap;
+
+public class Main{
+    public static void main(String[] args){
+        HashMap<String, String> nickNames = new HashMap<String, String>();
+        nickNames.put("matti","mage");
+        nickNames.put("mikael","mixu");
+        nickNames.put("Wiliam","bozer");
+        nickNames.put("Deacon","jhon");
+        System.out.println("HashMap: "+nickNames);
+        System.out.println("Mikales nick name:"+nickNames.get("mikael"));
+    }
+}
