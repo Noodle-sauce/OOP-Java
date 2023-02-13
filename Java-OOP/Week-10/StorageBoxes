@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public interface ToBeStored{
     double weight();
 }
@@ -7,34 +9,61 @@ class Book implements ToBeStored{
     private String name;
     private double weight;
     
-    public Book(String writer,String name,double weight){
+    public Book(String writer, String name, double weight){
         this.writer = writer;
         this.name = name;
-        this.weight = weight; 
+        this.weight = weight;
     }
-    
-    public double weight(){
+    @Override
+    public double weight() {
         return this.weight;
     }
+    
 }
 
 class CD implements ToBeStored{
     private String artist;
     private String title;
-    private int year;
+    private int publishinYear;
     private double weight;
     
-    public CD(String artist,String title,int year){
+    public CD(String artist, String title, int publishinYear, double weight){
         this.artist = artist;
         this.title = title;
-        this.year = year;
+        this.publishinYear = publishingYear;
         this.weight = 0.1;
     }
-    
-    public double weight(){
+    @Override
+    public double weight() {
         return this.weight;
     }
+    
 }
+
+class Box {
+    private double maxWeight;
+    private ArrayList<ToBeStored> boxItems;
+    
+    public Box(double maxWeight){
+        this.maxWeight = maxWeight;
+        this.boxItems = new ArrayList<ToBeStored>();
+    }
+    
+    public double weight() {
+        double weight = 0.0;
+        for(ToBeStored thing : boxItems){
+            weight += thing.weight();
+        }
+        return weight;
+    }
+
+    public void add(ToBeStored thing){
+        if(this.weight()+thing.weight <= maxWeight){
+            this.boxItems.add(thing);
+        }
+    }
+}
+//I updated the class code on top ^
 
 class Main{
     public static void main(String[] args){
